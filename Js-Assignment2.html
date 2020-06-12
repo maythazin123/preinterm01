@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            document.addEventListener('DOMContentLoaded',() =>{
+                document.querySelector('#todo-list').onsubmit = () =>{
+                    const li = document.createElement('li');
+                    li.innerHTML=document.querySelector('#task').value;
+                    document.querySelector('#list').append(li);
+                    document.querySelector('#task').value = '';
+                    return false;
+                };
+            });
+        </script>
+        <title>Todo list</title>
+    </head>
+    <body>
+        <h1>To Do List</h1>
+        <ul id="list"></ul>
+        <form id="todo-list">
+            <input id="task" type="text" onkeyup="if(this.value.length>0)document.getElementById('subb').disabled=false;
+            else document.getElementById('subb').disabled=true;">
+            <input type="submit" id="subb" disabled>
+        </form>
+    </body>
+</html>
