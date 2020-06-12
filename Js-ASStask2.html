@@ -3,7 +3,7 @@
     <head>
         <script type='text/javascript' src='http://code.jquery.com/jquery.min.js'></script>
         <script type='text/javascript'>
-       $(document).ready(function() {
+      document.addEventListener('DOMContentLoaded',() =>{
      $(':input[type="submit"]').prop('disabled', true);
      $('input[type="text"]').keyup(function() {
         if($(this).val() != '') {
