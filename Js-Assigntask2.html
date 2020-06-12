@@ -6,7 +6,7 @@
         document.addEventListener('DOMContentLoaded',function() {
             document.getElementById('aa').disabled= true;
             $('input[type="text"]').keyup(function() {
-        if($(this.value) != '') {
+        if($(this).val() != '') {
             document.getElementById('aa').disabled= false;
         }
      });
